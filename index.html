@@ -44,6 +44,40 @@
       transform: translateY(-4px);
       box-shadow: 0 0 18px rgba(96,165,250,0.2);
     }
+    .blog-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      border-radius: 14px;
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      color: #f0f0f0;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .blog-card img {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+
+    .blog-card .card-body {
+      padding: 1.2rem;
+    }
+
+    .blog-card .btn {
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .blog-card .btn:hover {
+      background: #0d6efd;
+      color: #fff;
+    }
+
     a {
       color: #60a5fa;
       text-decoration: none;
@@ -60,6 +94,14 @@
       background: #111827;
       color: #aaa;
       font-size: 0.9rem;
+    }
+    .platform-logo {
+      width: 220px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .logo-col {
+      min-width: 240px; /* ensures equal spacing for all cards */
     }
   </style>
 </head>
@@ -137,44 +179,94 @@
   </div>
 </section>
 
-<!-- CLOUD PLATFORMS SECTION -->
-<section data-aos="fade-up">
-  <h2 class="mb-4">☁️ Cloud Platforms</h2>
+<!-- TECHNICAL SKILLS & TOOLS SECTION -->
+<section data-aos="fade-up" class="py-5">
+  <h2 class="mb-5">🛠️ Technical Skills & Tools</h2>
+
   <div class="row g-4">
-    <div class="col-md-4 d-flex">
-      <div class="card text-center p-3 flex-fill shadow-sm h-100">
-        <img src="https://img.shields.io/badge/-Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white"
-             class="mx-auto d-block mb-3" style="max-width: 200px;">
+
+    <!-- DevOps Tools -->
+    <div class="col-md-6 col-lg-4 d-flex">
+      <div class="card flex-fill text-center p-4 shadow-sm h-100">
+        <h4 class="mb-3">⚙️ DevOps Tools</h4>
         <ul class="text-start">
-          <li>IAM, VPC, GKE, GCE</li>
-          <li>Cloud Functions, SQL, GCS</li>
-          <li>Logging, Monitoring, SCC</li>
+          <li><b>IaC & Config:</b> Terraform, Ansible, Powershell DSC, Crossplane, Terragrunt</li>
+          <li><b>Containerization:</b> Docker, Kubernetes, Helm, Kustomize</li>
+          <li><b>CI/CD & VCS:</b> Git, GitLab CI/CD, Azure DevOps, GitHub Actions, GCP Cloud Build, ArgoCD</li>
+          <li><b>Others:</b> Nginx, Linux, GCP Disaster Recovery</li>
         </ul>
       </div>
     </div>
-    <div class="col-md-4 d-flex">
-      <div class="card text-center p-3 flex-fill shadow-sm h-100">
-        <img src="https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"
-             class="mx-auto d-block mb-3" style="max-width: 200px;">
+
+    <!-- Programming & Scripting -->
+    <div class="col-md-6 col-lg-4 d-flex">
+      <div class="card flex-fill text-center p-4 shadow-sm h-100">
+        <h4 class="mb-3">💻 Programming & Scripting</h4>
         <ul class="text-start">
-          <li>VPC, EC2, S3</li>
-          <li>RDS, ECR, Lambda</li>
-          <li>Monitoring & IAM</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-4 d-flex">
-      <div class="card text-center p-3 flex-fill shadow-sm h-100">
-        <img src="https://img.shields.io/badge/-Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white"
-             class="mx-auto d-block mb-3" style="max-width: 200px;">
-        <ul class="text-start">
-          <li>Azure VM, AKS, SQL DB</li>
-          <li>Networking & Storage</li>
+          <li><b>Languages:</b> Python, Bash</li>
+          <li><b>Backend / Frameworks:</b> Flask, Node.js</li>
+          <li><b>Databases:</b> SQL, MongoDB, Redis</li>
+          <li><b>ML / Data:</b> EDA, PyTorch, TensorFlow</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<!-- CLOUD PLATFORMS SECTION -->
+<section data-aos="fade-up" class="py-5">
+  <h2 class="mb-4 text-center">☁️ Cloud Platforms & Services</h2>
+
+  <div class="container-fluid">
+
+    <!-- GCP Card -->
+    <div class="card mb-4 p-4 shadow-sm">
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <div class="logo-col d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-4">
+          <img src="https://img.shields.io/badge/-Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" 
+               class="platform-logo" alt="Google Cloud">
+        </div>
+        <ul class="mb-0 flex-grow-1">
+          <li><b>Core Services:</b> IAM, Networking (VPC, VPN, DNS), Security (SCC, KMS)</li>
+          <li><b>Compute:</b> Cloud Functions, Cloud Run, GKE</li>
+          <li><b>Data:</b> Cloud SQL, BigQuery, Filestore</li>
+          <li><b>Ops:</b> Logging, Monitoring</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AWS Card -->
+    <div class="card mb-4 p-4 shadow-sm">
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <div class="logo-col d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-4">
+          <img src="https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" 
+               class="platform-logo" alt="AWS">
+        </div>
+        <ul class="mb-0 flex-grow-1">
+          <li><b>Core Services:</b> VPC, EC2, S3</li>
+          <li><b>Compute & Storage:</b> RDS, ECR, Lambda</li>
+          <li><b>Ops:</b> Monitoring & IAM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Azure Card -->
+    <div class="card mb-4 p-4 shadow-sm">
+      <div class="d-flex flex-column flex-md-row align-items-center">
+        <div class="logo-col d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-4">
+          <img src="https://img.shields.io/badge/-Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" 
+               class="platform-logo" alt="Azure">
+        </div>
+        <ul class="mb-0 flex-grow-1">
+          <li><b>Core Services:</b> Azure VM, AKS, SQL DB</li>
+          <li><b>Networking & Storage:</b> Virtual Networks, Blob Storage</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 <!-- CERTIFICATIONS -->
@@ -189,13 +281,43 @@
 </section>
 
 <!-- BLOG POSTS -->
-<section data-aos="fade-up">
-  <h2>📝 Blog Posts</h2>
-  <ul>
-    <li><a href="https://medium.com/@kefdes21/automate-server-configuration-on-azure-with-aks-hosted-ansible-awx-260e2eeb2d1f" target="_blank">Automate Server Configuration on Azure with AKS-hosted Ansible AWX</a></li>
-    <li><a href="https://medium.com/@kefdes21/ip-addresses-explained-visually-networking-basics-3faef4171091" target="_blank">IP Addresses Explained Visually – Networking Basics</a></li>
-  </ul>
+<section id="blogs" class="py-5" data-aos="fade-up">
+  <div class="container">
+    <h2 class="mb-4">📝 Blog Posts</h2>
+    <div class="row g-4">
+
+      <!-- Blog 1 -->
+      <div class="col-md-6 d-flex">
+        <div class="card blog-card shadow-sm flex-fill">
+          <img src="images/awx-blog.jpg" class="card-img-top" alt="Automate Server Configuration with AKS-hosted AWX">
+          <div class="card-body">
+            <h5 class="card-title">Automate Server Configuration on Azure with AKS-hosted Ansible AWX</h5>
+            <p class="card-text">
+              Learn how to set up an automation workflow on Azure by hosting Ansible AWX on AKS — simplifying server configuration and management.
+            </p>
+            <a href="https://medium.com/@kefdes21/automate-server-configuration-on-azure-with-aks-hosted-ansible-awx-260e2eeb2d1f" target="_blank" class="btn btn-outline-light btn-sm">Read on Medium →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-md-6 d-flex">
+        <div class="card blog-card shadow-sm flex-fill">
+          <img src="images/ip-basics.jpg" class="card-img-top" alt="IP Addresses Explained Visually">
+          <div class="card-body">
+            <h5 class="card-title">IP Addresses Explained Visually – Networking Basics</h5>
+            <p class="card-text">
+              A visual guide to understanding IP addresses, subnets, and how data travels across networks — perfect for beginners in networking.
+            </p>
+            <a href="https://medium.com/@kefdes21/ip-addresses-explained-visually-networking-basics-3faef4171091" target="_blank" class="btn btn-outline-light btn-sm">Read on Medium →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 <footer>
   © 2025 Kevin Fernandes. Built using Bootstrap + AOS.
