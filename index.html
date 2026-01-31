@@ -8,102 +8,11 @@
   <!-- Bootstrap & AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="./base.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #0d1117;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #1f2937, #111827);
-      padding: 3rem 1rem;
-      text-align: center;
-      border-bottom: 2px solid #1e3a8a;
-      color: #f5f5f5;
-    }
-    h1, h2 {
-      color: #60a5fa;
-    }
-    section {
-      margin: 3rem auto;
-      max-width: 1000px;
-      padding: 2rem;
-    }
-    .card {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: white;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 18px rgba(96,165,250,0.2);
-    }
-    .blog-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: none;
-      border-radius: 14px;
-      transition: transform 0.25s ease, box-shadow 0.3s ease;
-      color: #f0f0f0;
-    }
+  <!-- DevIcons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    .blog-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .blog-card img {
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 14px;
-      border-top-right-radius: 14px;
-    }
-
-    .blog-card .card-body {
-      padding: 1.2rem;
-    }
-
-    .blog-card .btn {
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .blog-card .btn:hover {
-      background: #0d6efd;
-      color: #fff;
-    }
-
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .badge-img {
-      margin: 3px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #111827;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-    .platform-logo {
-      width: 220px;
-      height: 50px;
-      object-fit: contain;
-    }
-    .logo-col {
-      min-width: 240px; /* ensures equal spacing for all cards */
-    }
-  </style>
 </head>
 <body>
 <header data-aos="fade-down">
@@ -179,41 +88,86 @@
   </div>
 </section>
 
-<!-- TECHNICAL SKILLS & TOOLS SECTION -->
-<section data-aos="fade-up" class="py-5">
+<!-- TECHNICAL SKILLS -->
+<section data-aos="fade-up">
   <h2 class="mb-5">🛠️ Technical Skills & Tools</h2>
 
   <div class="row g-4">
 
-    <!-- DevOps Tools -->
-    <div class="col-md-6 col-lg-6 d-flex">
-      <div class="card flex-fill text-center p-4 shadow-sm h-100">
-        <h4 class="mb-3">⚙️ DevOps Tools</h4>
-        <ul class="text-start">
-          <li><b>IaC & Config:</b> Terraform, Ansible, Powershell DSC, Crossplane, Terragrunt</li>
-          <li><b>Containerization:</b> Docker, Kubernetes, Helm, Kustomize</li>
-          <li><b>CI/CD & VCS:</b> Git, GitLab CI/CD, Azure DevOps, GitHub Actions, GCP Cloud Build, ArgoCD</li>
-          <li><b>Others:</b> Nginx, Linux, GCP Disaster Recovery</li>
-        </ul>
+    <!-- DevOps -->
+    <div class="col-md-6 d-flex">
+      <div class="card skill-card flex-fill p-4 position-relative">
+        <h4 class="text-center mb-4">⚙️ DevOps & Platform</h4>
+
+        <div class="skill-group">
+          <h6>IaC & Config</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-terraform-plain colored"></i>Terraform</span>
+            <span class="skill-chip"><i class="devicon-packer-plain colored"></i>Packer</span>
+            <span class="skill-chip"><i class="devicon-ansible-plain"></i></i>Ansible</span>
+            <span class="skill-chip">Crossplane</span>
+            <span class="skill-chip">Terragrunt</span>
+            <span class="skill-chip">PowerShell DSC</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h6>Containers</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker</span>
+            <span class="skill-chip"><i class="devicon-kubernetes-plain colored"></i>Kubernetes</span>
+            <span class="skill-chip"><i class="devicon-helm-original"></i>Helm</span>
+            <span class="skill-chip">Kustomize</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h6>CI/CD & GitOps</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-git-plain colored"></i>Git</span>
+            <span class="skill-chip"><i class="devicon-gitlab-plain colored"></i>GitLab CI</span>
+            <span class="skill-chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span>
+            <span class="skill-chip">Azure DevOps</span>
+            <span class="skill-chip"><i class="devicon-argocd-plain-wordmark colored"></i>ArgoCD</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Programming & Scripting -->
-    <div class="col-md-6 col-lg-6 d-flex">
-      <div class="card flex-fill text-center p-4 shadow-sm h-100">
-        <h4 class="mb-3">💻 Programming & Scripting</h4>
-        <ul class="text-start">
-          <li><b>Languages:</b> Python, Bash</li>
-          <li><b>Backend / Frameworks:</b> Flask, Node.js</li>
-          <li><b>Databases:</b> SQL, MongoDB, Redis</li>
-          <li><b>ML / Data:</b> EDA, PyTorch, TensorFlow</li>
-        </ul>
+    <!-- Programming -->
+    <div class="col-md-6 d-flex">
+      <div class="card skill-card flex-fill p-4 position-relative">
+        <h4 class="text-center mb-4">💻 Programming & Data</h4>
+
+        <div class="skill-group">
+          <h6>Languages</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-python-plain colored"></i>Python</span>
+            <span class="skill-chip"><i class="devicon-bash-plain"></i>Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h6>Backend</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-flask-original"></i>Flask</span>
+            <span class="skill-chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h6>Databases</h6>
+          <div class="skill-icons">
+            <span class="skill-chip"><i class="devicon-postgresql-plain colored"></i>SQL</span>
+            <span class="skill-chip"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+            <span class="skill-chip"><i class="devicon-redis-plain colored"></i>Redis</span>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
-
 
 <!-- CLOUD PLATFORMS SECTION -->
 <section data-aos="fade-up" class="py-5">
