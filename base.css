@@ -32,6 +32,90 @@ section {
     transform: translateY(-4px);
     box-shadow: 0 0 18px rgba(96,165,250,0.2);
 }
+.about-card,
+.cert-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 28px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+.highlight {
+  color: #5ddcff;
+  font-weight: 600;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+  width: 100%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cert-badge:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cert-badge img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.cert-title {
+  font-weight: 600;
+}
+
+.cert-meta {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Certifications styling */
+.cert-card {
+  border-radius: 1rem;              /* rounder edges */
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-grid img {
+  border-radius: 0.75rem;           /* softer badge edges */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* subtle interaction */
+.cert-grid img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile: center nicely */
+@media (max-width: 768px) {
+  .cert-grid {
+    justify-content: center;
+  }
+}
+
 .blog-card {
     background: rgba(255, 255, 255, 0.05);
     border: none;
@@ -142,6 +226,14 @@ footer {
 
 .skill-chip i {
   font-size: 1.2rem;
+}
+
+.skill-chip img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 .skill-chip:hover {
